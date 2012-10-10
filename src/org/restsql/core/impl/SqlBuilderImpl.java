@@ -96,7 +96,7 @@ public class SqlBuilderImpl implements SqlBuilder {
 				} else {
 					sql.getClause().append(", ");
 				}
-				sql.getClause().append(column.getColumnName());
+				sql.getClause().append(table.getTableName()+"."+column.getColumnName());
 			}
 		}
 		return firstColumn;
